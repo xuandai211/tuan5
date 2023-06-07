@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+        lang="en">
 <head>
     <meta charset="UTF-8">
     <title>My App</title>
@@ -9,7 +12,7 @@
 <header th:fragment="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">HUTECH</a>
+            <a class="navbar-brand" href="/">HUTECH</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent"
@@ -29,7 +32,6 @@
                         </form>
                     <li sec:authorize="!isAuthenticated()">
                         <a class="btn btn-outline-primary" href="/login">Login</a>
-
                     </li>
                     </li>
                 </ul>

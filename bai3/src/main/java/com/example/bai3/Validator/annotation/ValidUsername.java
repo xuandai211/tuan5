@@ -1,6 +1,7 @@
 package com.example.bai3.Validator.annotation;
 
-import com.example.bai3.Validator.ValidCategoryIdValidator;
+import com.example.bai3.Validator.ValidUsernameValidator;
+//import com.example.bai3.Validator
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
@@ -16,7 +17,7 @@ import java.lang.annotation.Target;
 
 @Target({TYPE,FIELD})
 @Retention(RUNTIME)
-@Constraint(validatedBy = ValidCategoryIdValidator.class)
+@Constraint(validatedBy = ValidUsernameValidator.class)
 public @interface ValidUsername {
     String message() default "Username already exists";
     Class<?>[] groups() default {};

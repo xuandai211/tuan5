@@ -1,6 +1,5 @@
 package com.example.bai3.entity;
 
-import com.example.bai3.services.CustomUserDetailService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import com.example.bai3.repository.IUserRepository;
@@ -8,10 +7,20 @@ import com.example.bai3.repository.IUserRepository;
 import java.util.Collections;
 import java.util.Collection;
 
-public class CustomUserDetail implements UserDetails  {
-    private final User user ;
+public class CustomUserDetail implements UserDetails {
 
-    public CustomUserDetail(User user, IUserRepository userRepository){this.user=user;}
+    private final User user;
+
+    private final IUserRepository userRepository;
+
+
+    public CustomUserDetail (User user , IUserRepository userRepository)
+    {
+        this.user= user;
+
+        this.userRepository=userRepository;
+
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

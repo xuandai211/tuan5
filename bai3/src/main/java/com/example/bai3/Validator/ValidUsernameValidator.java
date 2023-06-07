@@ -1,4 +1,4 @@
-package com.example.bai3.Validator.annotation;
+package com.example.bai3.Validator;
 
 import com.example.bai3.repository.IUserRepository;
 import com.example.bai3.Validator.annotation.ValidUsername;
